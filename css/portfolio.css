@@ -1,0 +1,31 @@
+:root{
+    --primay-color: #130123;
+    --secondary-color: black;
+    --tertiary-color: #ffd700;
+    --quaternary-color: #8a00c4;
+
+}
+
+.escuro{
+    --primay-color: #130123;
+    --secondary-color: black;
+    --tertiary-color: #ffd700;
+    --quaternary-color: #8a00c4;
+    --text-color: white;
+}
+
+.claro{
+    --primay-color: #f2f0e6;
+    --secondary-color: black;
+    --tertiary-color: #ffd700;
+    --quaternary-color: #82c8e5;
+    --text-color: black;
+}
+
+body header img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: solid 3px var(--primay-color);
+    object-fit: fill;
+}
