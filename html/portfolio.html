@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/portfolio.css">
+    <script src="../js/portfolio.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="idade()">
     <header>
         <h1>Bem vindo ao meu Portfolio</h1>
         <img src="../img/Nazuna.png" alt="nazuna">
@@ -16,7 +17,7 @@
             <h2>Sobre mim:</h2>
             <ul>
                 <li><strong>Nome: </strong>Felipe Shedler Ferreira Santos Zulmiro</li>
-                <li><strong>Idade: </strong> 19 Anos</li>
+                <li><strong>Idade: </strong> <span id="idade"></span></li>
                 <li><strong>Dev: </strong>Junior</li>
                 <li><strong>Email: </strong>Dpseucoloco@gmail.com</li>
                 <li><strong>Contato: </strong>(31) 985818617</li>
@@ -39,6 +40,7 @@
             </ul>
         </section>
         <section class="competencias" id="competencias">
+            <h2>Competencias</h2>
             <section class="back" id="back">
                 <h3>Backend</h3>
                 <ul>
