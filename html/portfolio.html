@@ -3,76 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Zulmiro — Desenvolvedor de Software</title>
+    <meta name="description" content="Portfólio de Felipe Shedler Ferreira Santos Zulmiro, desenvolvedor de software focado em backend, automação e desenvolvimento web.">
     <link rel="stylesheet" href="../css/portfolio.css">
-    <script src="../js/portfolio.js"></script>
-    <title>Document</title>
 </head>
-<body onload="idade()">
-    <header>
-        <h1>Bem vindo ao meu Portfolio</h1>
-        <img src="../img/Nazuna.png" alt="nazuna">
+<body>
+
+    <nav class="nav">
+        <div class="wrap">
+            <span class="nav-brand">felipe<span>.</span>dev</span>
+            <div class="nav-links">
+                <a href="#informacoes">Sobre</a>
+                <a href="#competencias">Stack</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <p class="eyebrow">Disponível para novos projetos</p>
+                <h1>Felipe Zulmiro,<br><span class="accent">desenvolvedor de software.</span></h1>
+                <p class="lead">
+                    Desenvolvedor backend com trânsito por Python, MySQL e o ecossistema web,
+                    construindo sistemas que vão do protótipo ao deploy — sempre com Git como
+                    espinha dorsal do processo.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+                    <a class="btn btn-ghost" href="https://github.com/Muzgeist" target="_blank" rel="noopener">GitHub ↗</a>
+                    <a class="btn btn-ghost" href="#contato">Contato</a>
+                </div>
+            </div>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-ring">
+                    <img src="../img/Nazuna.png" alt="Foto de perfil de Felipe">
+                </div>
+            </div>
+        </div>
     </header>
+
     <main>
         <section class="informacoes" id="informacoes">
-            <h2>Sobre mim:</h2>
-            <ul>
-                <li><strong>Nome: </strong>Felipe Shedler Ferreira Santos Zulmiro</li>
-                <li><strong>Idade: </strong> <span id="idade"></span></li>
-                <li><strong>Dev: </strong>Junior</li>
-                <li><strong>Email: </strong>Dpseucoloco@gmail.com</li>
-                <li><strong>Contato: </strong>(31) 985818617</li>
-                <li><strong>Endereço: </strong>Contagem Novo Eldorado</li>
-            </ul>
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag">// sobre</span>
+                    <h2>Quem sou eu</h2>
+                </div>
+                <div class="about-grid">
+                    <ul class="info-list">
+                        <li><strong>Nome</strong> Felipe Shedler Ferreira Santos Zulmiro</li>
+                        <li><strong>Idade</strong> <span id="idade"></span> anos</li>
+                        <li><strong>Cargo</strong> Desenvolvedor Júnior</li>
+                        <li><strong>Email</strong> <a href="mailto:Dpseucoloco@gmail.com">Dpseucoloco@gmail.com</a></li>
+                        <li><strong>Contato</strong> (31) 98581-8617</li>
+                        <li><strong>Endereço</strong> Contagem, Novo Eldorado — MG</li>
+                    </ul>
+                    <div>
+                        <h3 style="font-size:1.05rem; color: var(--lilac); margin-bottom:16px;">Hobbies</h3>
+                        <div class="hobbies-grid">
+                            <div class="hobby-card">🎲 RPG de mesa</div>
+                            <div class="hobby-card">🎮 Video games</div>
+                            <div class="hobby-card">🛠️ Softwares pessoais</div>
+                            <div class="hobby-card">🤖 Agentes de IA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="hobies" id="hobies">
-            <h2>Hobbies:</h2>
-            <ul>
-                <li>RPG de Mesa</li>
-                <li>Video Games</li>
-                <li>Desenvolvimento de softwares de uso pessoal</li>
-                <li>Desenvolvimento de Agentes de IA</li>
-            </ul>
-        </section>
-        <section class="formacoes" id="formacoes">
-            <h2>Formaçoes</h2>
-            <ul>
-                <li>Tecnico em informatico por Senac MG </li>
-            </ul>
-        </section>
-        <section class="competencias" id="competencias">
-            <h2>Competencias</h2>
-            <section class="back" id="back">
-                <h3>Backend</h3>
-                <ul>
-                    <li>Python</li>
-                        <ul><li>Pyside6</li>
-                            <li>PyMySQL</li>
-                            <li>PyInstaller</li>
-                        </ul>
-                    <li>Mysql</li>
-                    <li>Git e GitHub</li>
 
+        <section class="formacoes" id="formacoes">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag">// trajetória</span>
+                    <h2>Formação</h2>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <strong>Técnico em Informática</strong>
+                        <span>Senac MG</span>
+                    </li>
                 </ul>
-            </section>
-            <section class="front" id="front">
-                <h3>Frontend</h3>
-                <ul>
-                    <li>Html5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                </ul>
-            </section>
+            </div>
         </section>
+
+        <section class="competencias" id="competencias">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="tag">// stack</span>
+                    <h2>Competências</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Backend</h3>
+                        <div class="pill-group">
+                            <span class="pill">Python</span>
+                            <span class="pill">PySide6</span>
+                            <span class="pill">PyMySQL</span>
+                            <span class="pill">PyInstaller</span>
+                            <span class="pill">MySQL</span>
+                            <span class="pill">Git &amp; GitHub</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <div class="pill-group">
+                            <span class="pill">HTML5</span>
+                            <span class="pill">CSS3</span>
+                            <span class="pill">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="projetos" id="projetos">
-            <h2>Projetos</h2>
-            <ul>
-                <li><a href="https://github.com/Muzgeist/Yggdrasil">Yggdrasil:</a><br>A Yggdrasil Se trata de 
-                um prototipo de um site que conecta Adotantes e ongs de animais abandonados, contando com sistema de filtros
-                sistema de cadastro de animais e usuarios bem como proteçoes como certos sistemas estando disponiveis apenas para ongs. 
-            </li>
-            </ul>
+            <div class="wrap">
+                <div class="section-head projects-meta">
+                    <div>
+                        <span class="tag">// projetos</span>
+                        <h2>Repositórios</h2>
+                    </div>
+                    <span class="sync-note"><span class="dot"></span>sincronizado automaticamente com o GitHub</span>
+                </div>
+                <div class="projects-grid" id="projetos-grid">
+                    <div class="project-card skeleton"></div>
+                    <div class="project-card skeleton"></div>
+                    <div class="project-card skeleton"></div>
+                    <div class="project-card skeleton"></div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer></footer>
+
+    <footer id="contato">
+        <div class="wrap">
+            <p>© <span id="ano-atual"></span> Felipe Zulmiro. Construído com HTML, CSS e JS puro.</p>
+            <div class="footer-links">
+                <a href="mailto:Dpseucoloco@gmail.com">Email</a>
+                <a href="https://github.com/Muzgeist" target="_blank" rel="noopener">GitHub</a>
+                <a href="#informacoes">Topo ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/portfolio.js"></script>
+    <script>document.getElementById("ano-atual").textContent = new Date().getFullYear();</script>
 </body>
 </html>
