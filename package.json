@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-felipe-shedler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio estatico (HTML/CSS/JS puro) de Felipe Shedler",
+  "scripts": {
+    "start": "http-server -p $PORT -c-1 ."
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
