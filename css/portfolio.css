@@ -34,8 +34,11 @@ body{
     margin: 0;
     background: var(--bg);
     background-image:
-        radial-gradient(ellipse 900px 500px at 12% -10%, rgba(138,79,209,0.22), transparent 60%),
-        radial-gradient(ellipse 700px 500px at 110% 10%, rgba(239,93,134,0.10), transparent 60%);
+        radial-gradient(ellipse 1000px 600px at 12% 0%, rgba(138,79,209,0.38), transparent 62%),
+        radial-gradient(ellipse 800px 600px at 110% 8%, rgba(239,93,134,0.22), transparent 60%),
+        radial-gradient(ellipse 900px 700px at 50% 100%, rgba(138,79,209,0.20), transparent 65%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -359,6 +362,25 @@ section > .wrap > .section-head{ margin-bottom: 38px; }
     background: rgba(239,93,134,0.1);
     border: 1px solid rgba(239,93,134,0.28);
     color: var(--coral);
+}
+.project-flow{
+    background: rgba(138,79,209,0.08);
+    border: 1px solid rgba(138,79,209,0.22);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+.project-flow-label{
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--lilac);
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 6px;
+}
+.project-flow p{
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-muted);
 }
 .project-foot{
     display: flex;
