@@ -9,6 +9,26 @@
 </head>
 <body>
 
+    <div class="spine" id="branch-spine" aria-hidden="true">
+        <svg class="spine-svg" viewBox="0 0 100 1000" preserveAspectRatio="none" focusable="false">
+            <path class="spine-path" d="M50,0 C70,45 30,95 50,150 C66,195 32,245 48,295
+                C64,340 30,385 50,430 L54,438 L44,443 L52,450 L50,430 C68,470 30,520 46,565
+                C62,605 34,650 50,695 C68,735 28,780 46,825
+                C62,865 36,910 50,955 C58,978 44,992 50,1000
+                M46,295 C56,300 70,292 78,305
+                M50,565 C40,572 26,566 18,580" />
+            <path class="spine-pulse" d="M50,0 C70,45 30,95 50,150 C66,195 32,245 48,295
+                C64,340 30,385 50,430 L54,438 L44,443 L52,450 L50,430 C68,470 30,520 46,565
+                C62,605 34,650 50,695 C68,735 28,780 46,825
+                C62,865 36,910 50,955 C58,978 44,992 50,1000" />
+            <path class="spine-progress" d="M50,0 C70,45 30,95 50,150 C66,195 32,245 48,295
+                C64,340 30,385 50,430 L54,438 L44,443 L52,450 L50,430 C68,470 30,520 46,565
+                C62,605 34,650 50,695 C68,735 28,780 46,825
+                C62,865 36,910 50,955 C58,978 44,992 50,1000" />
+        </svg>
+        <canvas class="ember-canvas" id="ember-canvas"></canvas>
+    </div>
+
     <nav class="nav">
         <div class="wrap">
             <span class="nav-brand">felipe<span>.</span>dev</span>
@@ -24,8 +44,11 @@
     <header class="hero">
         <div class="wrap hero-grid">
             <div>
-                <p class="eyebrow">Disponível para novos projetos</p>
-                <h1>Felipe Shedler,<br><span class="accent">desenvolvedor de software.</span></h1>
+                <p class="eyebrow">
+                    <span class="spine-node spine-node--hero is-lit" data-tooltip="Algiz — proteção" aria-hidden="true"><span class="spine-rune">ᛉ</span></span>
+                    Disponível para novos projetos
+                </p>
+                <h1><span class="hero-line hero-line-1">Felipe Shedler,</span><br><span class="hero-line hero-line-2">desenvolvedor de software.</span></h1>
                 <p class="lead">
                     Desenvolvedor backend com trânsito por Python, MySQL e o ecossistema web,
                     construindo sistemas que vão do protótipo ao deploy — sempre com Git como
@@ -49,7 +72,8 @@
         <section class="informacoes" id="informacoes">
             <div class="wrap">
                 <div class="section-head">
-                    <span class="tag">// sobre</span>
+                    <span class="spine-node" data-spine-node data-tooltip="Mannaz — o indivíduo" aria-hidden="true"><span class="spine-rune">ᛗ</span></span>
+                    <span class="spine-node-label" aria-hidden="true">sobre</span>
                     <h2>Quem sou eu</h2>
                 </div>
                 <div class="about-grid">
@@ -62,7 +86,7 @@
                         <li><strong>Endereço</strong> Contagem, Novo Eldorado — MG</li>
                     </ul>
                     <div>
-                        <h3 style="font-size:1.05rem; color: var(--lilac); margin-bottom:16px;">Hobbies</h3>
+                        <h3 style="font-size:1.05rem; color: var(--text-muted); margin-bottom:16px;">Hobbies</h3>
                         <div class="hobbies-grid">
                             <div class="hobby-card">🎲 RPG de mesa</div>
                             <div class="hobby-card">🎮 Video games</div>
@@ -77,13 +101,20 @@
         <section class="formacoes" id="formacoes">
             <div class="wrap">
                 <div class="section-head">
-                    <span class="tag">// trajetória</span>
+                    <span class="spine-node" data-spine-node data-tooltip="Raidho — jornada" aria-hidden="true"><span class="spine-rune">ᚱ</span></span>
+                    <span class="spine-node-label" aria-hidden="true">formacao</span>
                     <h2>Formação</h2>
                 </div>
                 <ul class="timeline">
                     <li>
+                        <span class="timeline-dot spine-node spine-node--plain" aria-hidden="true"></span>
                         <strong>Técnico em Informática</strong>
                         <span>Senac MG</span>
+                    </li>
+                    <li>
+                        <span class="timeline-dot spine-node spine-node--plain" aria-hidden="true"></span>
+                        <strong>Cursando ADS — Análise e Desenvolvimento de Sistemas</strong>
+                        <span>Senac MG, <span id="periodo-ads"></span>º período</span>
                     </li>
                 </ul>
             </div>
@@ -92,7 +123,8 @@
         <section class="competencias" id="competencias">
             <div class="wrap">
                 <div class="section-head">
-                    <span class="tag">// stack</span>
+                    <span class="spine-node" data-spine-node data-tooltip="Kenaz — ofício" aria-hidden="true"><span class="spine-rune">ᚲ</span></span>
+                    <span class="spine-node-label" aria-hidden="true">stack</span>
                     <h2>Competências</h2>
                 </div>
                 <div class="skills-grid">
@@ -123,10 +155,20 @@
             <div class="wrap">
                 <div class="section-head projects-meta">
                     <div>
-                        <span class="tag">// projetos</span>
                         <h2>Repositórios</h2>
+                        <div class="now-building" id="now-building" hidden>
+                            <span class="now-building-dot"></span>
+                            agora trabalhando em
+                            <a class="now-building-link" id="now-building-link" href="#" target="_blank" rel="noopener"></a>
+                        </div>
                     </div>
-                    <span class="sync-note"><span class="dot"></span>sincronizado automaticamente com o GitHub</span>
+                    <div class="projects-meta-side">
+                        <div class="repo-stats" id="repo-stats" hidden>
+                            <span class="repo-stat"><strong id="repo-stat-count"></strong>repositórios</span>
+                            <span class="repo-stat"><strong id="repo-stat-stars"></strong>estrelas</span>
+                        </div>
+                        <span class="sync-note"><span class="dot"></span><span id="sync-note-text">sincronizado automaticamente com o GitHub</span></span>
+                    </div>
                 </div>
                 <div class="projects-carousel" id="projetos-carousel">
                     <button class="carousel-arrow carousel-arrow--prev" id="carousel-prev" type="button" aria-label="Projeto anterior">‹</button>
