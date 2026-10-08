@@ -128,11 +128,15 @@
                     </div>
                     <span class="sync-note"><span class="dot"></span>sincronizado automaticamente com o GitHub</span>
                 </div>
-                <div class="projects-grid" id="projetos-grid">
-                    <div class="project-card skeleton"></div>
-                    <div class="project-card skeleton"></div>
-                    <div class="project-card skeleton"></div>
-                    <div class="project-card skeleton"></div>
+                <div class="projects-carousel" id="projetos-carousel">
+                    <button class="carousel-arrow carousel-arrow--prev" id="carousel-prev" type="button" aria-label="Projeto anterior">‹</button>
+                    <div class="projects-track" id="projetos-track">
+                        <div class="project-card skeleton"></div>
+                        <div class="project-card skeleton"></div>
+                        <div class="project-card skeleton"></div>
+                        <div class="project-card skeleton"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow--next" id="carousel-next" type="button" aria-label="Próximo projeto">›</button>
                 </div>
             </div>
         </section>
@@ -148,6 +152,22 @@
             </div>
         </div>
     </footer>
+
+    <div class="project-modal-backdrop" id="project-modal-backdrop" hidden>
+        <div class="project-modal" id="project-modal" role="dialog" aria-modal="true"
+             aria-labelledby="project-modal-title" aria-describedby="project-modal-desc" tabindex="-1">
+            <button class="project-modal-close" id="project-modal-close" type="button" aria-label="Fechar">✕</button>
+            <h3 class="project-modal-title" id="project-modal-title"></h3>
+            <p class="project-modal-desc" id="project-modal-desc"></p>
+            <div class="project-modal-lang">
+                <span class="project-modal-lang-label">// linguagens</span>
+                <div class="lang-bar is-loading" id="project-modal-langbar"></div>
+                <ul class="lang-legend" id="project-modal-langlegend"></ul>
+            </div>
+            <div class="project-modal-stats" id="project-modal-stats"></div>
+            <a class="btn btn-primary project-modal-link" id="project-modal-link" href="#" target="_blank" rel="noopener">Ver no GitHub ↗</a>
+        </div>
+    </div>
 
     <script src="../js/portfolio.js"></script>
     <script>document.getElementById("ano-atual").textContent = new Date().getFullYear();</script>
