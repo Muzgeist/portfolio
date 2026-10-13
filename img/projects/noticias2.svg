@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de feed de notícias">
+  <defs>
+    <radialGradient id="bgNoticias2" cx="75%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgNoticias2)"/>
+  <path d="M380 25 Q340 70 380 115" fill="none" stroke="#2a4530" stroke-width="2" opacity=".5"/>
+  <g transform="translate(120 45)" fill="none" stroke="#c6fa6e" stroke-width="4" stroke-linecap="round">
+    <path d="M0 0 a60 60 0 0 1 60 60"/>
+    <path d="M0 30 a30 30 0 0 1 30 30"/>
+    <circle cx="6" cy="60" r="7" fill="#c6fa6e" stroke="none"/>
+  </g>
+  <g transform="translate(205 50)" fill="none" stroke="#8fa28f" stroke-width="3">
+    <rect x="0" y="0" width="100" height="78" rx="6"/>
+    <line x1="14" y1="22" x2="86" y2="22"/>
+    <line x1="14" y1="40" x2="70" y2="40"/>
+    <line x1="14" y1="58" x2="55" y2="58"/>
+  </g>
+</svg>

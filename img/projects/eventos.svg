@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de gestão de eventos">
+  <defs>
+    <radialGradient id="bgEventos" cx="25%" cy="80%" r="95%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgEventos)"/>
+  <g transform="translate(130 42)">
+    <rect x="0" y="12" width="140" height="120" rx="8" fill="none" stroke="#8fa28f" stroke-width="3"/>
+    <line x1="0" y1="42" x2="140" y2="42" stroke="#8fa28f" stroke-width="3"/>
+    <line x1="30" y1="0" x2="30" y2="24" stroke="#c6fa6e" stroke-width="4" stroke-linecap="round"/>
+    <line x1="110" y1="0" x2="110" y2="24" stroke="#c6fa6e" stroke-width="4" stroke-linecap="round"/>
+    <rect x="22" y="60" width="22" height="22" rx="3" fill="#c6fa6e" opacity=".9"/>
+    <rect x="59" y="60" width="22" height="22" rx="3" fill="#2a4530"/>
+    <rect x="96" y="60" width="22" height="22" rx="3" fill="#2a4530"/>
+    <rect x="22" y="92" width="22" height="22" rx="3" fill="#2a4530"/>
+    <rect x="59" y="92" width="22" height="22" rx="3" fill="#2a4530"/>
+  </g>
+</svg>

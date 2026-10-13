@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de sistema de adoção de animais">
+  <defs>
+    <radialGradient id="bgYgg" cx="50%" cy="10%" r="100%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgYgg)"/>
+  <path d="M200 190 L200 90 M200 130 Q160 110 150 70 M200 110 Q240 90 250 55 M200 150 Q170 150 155 185 M200 150 Q230 150 245 185"
+        fill="none" stroke="#2a4530" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(200 55)" fill="#c6fa6e">
+    <circle cx="0" cy="0" r="12"/>
+    <circle cx="-16" cy="-14" r="6.5"/>
+    <circle cx="16" cy="-14" r="6.5"/>
+    <circle cx="-18" cy="6" r="6"/>
+    <circle cx="18" cy="6" r="6"/>
+  </g>
+</svg>

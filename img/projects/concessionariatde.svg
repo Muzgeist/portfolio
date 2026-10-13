@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de banco de dados para concessionária de veículos">
+  <defs>
+    <radialGradient id="bgConc" cx="60%" cy="20%" r="95%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgConc)"/>
+  <g transform="translate(110 70)" fill="none" stroke="#c6fa6e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 60 L25 25 Q35 10 60 10 L140 10 Q165 10 175 25 L190 60"/>
+    <path d="M10 60 L190 60 L190 80 L10 80 Z"/>
+    <circle cx="45" cy="82" r="14" stroke="#8fa28f"/>
+    <circle cx="155" cy="82" r="14" stroke="#8fa28f"/>
+  </g>
+  <g transform="translate(40 30)" fill="none" stroke="#2a4530" stroke-width="3">
+    <ellipse cx="0" cy="0" rx="18" ry="6"/>
+    <path d="M-18 0 L-18 20 Q0 28 18 20 L18 0"/>
+  </g>
+</svg>

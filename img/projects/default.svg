@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de projeto de código">
+  <defs>
+    <radialGradient id="bgDefault" cx="30%" cy="20%" r="85%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgDefault)"/>
+  <path d="M30 20 Q50 70 25 120 Q5 160 35 200" fill="none" stroke="#2a4530" stroke-width="2" opacity=".55"/>
+  <g transform="translate(200 112)" fill="none" stroke="#c6fa6e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
+    <path d="M-70 -10 L-95 15 L-70 40"/>
+    <path d="M70 -10 L95 15 L70 40"/>
+    <path d="M-15 -45 L15 60" stroke="#8fa28f" stroke-width="3"/>
+  </g>
+</svg>

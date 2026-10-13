@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de galeria de imagens/wallpapers">
+  <defs>
+    <radialGradient id="bgWall" cx="60%" cy="15%" r="90%">
+      <stop offset="0%" stop-color="#1c2a1f"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgWall)"/>
+  <rect x="100" y="40" width="200" height="140" rx="8" fill="none" stroke="#8fa28f" stroke-width="3"/>
+  <circle cx="150" cy="85" r="14" fill="#c6fa6e" opacity=".9"/>
+  <path d="M110 170 L170 115 L205 145 L240 100 L292 170 Z" fill="#2a4530" opacity=".85"/>
+</svg>

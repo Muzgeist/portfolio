@@ -253,9 +253,12 @@ header.hero{
 .hero-grid{
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
+    grid-template-areas: "text photo";
     gap: 56px;
     align-items: center;
 }
+.hero-text{ grid-area: text; }
+.hero-photo-wrap{ grid-area: photo; }
 .eyebrow{
     font-family: var(--font-mono);
     font-size: 0.85rem;
@@ -380,8 +383,13 @@ section{ padding: 64px 0; }
 .informacoes{ border-top: 1px solid var(--line); }
 .about-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+}
+.subhead{
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
 }
 .info-list li{
     display: flex;
@@ -415,8 +423,14 @@ section{ padding: 64px 0; }
     color: var(--text-muted);
 }
 
-/* ---------- FORMAÇÃO ---------- */
+/* ---------- FORMAÇÃO E EXPERIÊNCIA ---------- */
 .formacoes{ border-top: 1px solid var(--line); }
+.formacao-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
 .timeline{
     border-left: 2px solid var(--line);
     padding-left: 24px;
@@ -428,12 +442,16 @@ section{ padding: 64px 0; }
 .timeline-dot{ left: -30px; top: 4px; }
 .timeline strong{ display: block; color: var(--ink); font-family: var(--font-display); }
 .timeline span{ color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); }
+.experience-card{
+    line-height: 1.6;
+    font-size: 0.92rem;
+}
 
 /* ---------- COMPETÊNCIAS ---------- */
 .competencias{ border-top: 1px solid var(--line); }
 .skills-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 .skill-card{
@@ -593,7 +611,7 @@ section{ padding: 64px 0; }
     background: var(--bg-elev);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 22px;
+    padding: 0 22px 22px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -601,6 +619,14 @@ section{ padding: 64px 0; }
     width: 300px;
     flex: 0 0 auto;
     cursor: pointer;
+    overflow: hidden;
+}
+.project-thumb{
+    width: calc(100% + 44px);
+    margin: 0 -22px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
 }
 .project-card:hover{
     border-color: var(--lime);
@@ -676,6 +702,14 @@ section{ padding: 64px 0; }
     font-size: 0.75rem;
     color: var(--text-muted);
 }
+.project-link{
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--lime);
+    text-decoration: none;
+}
+.project-link:hover{ text-decoration: underline; }
 .project-card.skeleton{
     min-height: 168px;
     background: linear-gradient(100deg, var(--bg-elev) 40%, #1c2a1f 50%, var(--bg-elev) 60%);
@@ -813,7 +847,43 @@ section{ padding: 64px 0; }
     padding: 12px 0;
 }
 
-/* ---------- CONTACT / FOOTER ---------- */
+/* ---------- CONTATO ---------- */
+.contato{ border-top: 1px solid var(--line); }
+.contato-lead{
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+.contato-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.contato-link{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--bg-elev);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    min-width: 200px;
+    flex: 1 1 200px;
+    text-decoration: none;
+    transition: border-color .2s ease, transform .2s ease;
+}
+.contato-link:hover{ border-color: var(--lime); transform: translateY(-2px); }
+.contato-link-label{
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--lime);
+}
+.contato-link span:last-child{ color: var(--ink); font-size: 0.92rem; }
+
+/* ---------- RODAPÉ ---------- */
 footer{
     border-top: 1px solid var(--line);
     padding: 40px 0 50px;
@@ -830,9 +900,11 @@ footer p{ color: var(--text-muted); font-size: 0.82rem; font-family: var(--font-
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 800px){
-    .hero-grid{ grid-template-columns: 1fr; }
-    .hero-photo-wrap{ order: -1; }
-    .about-grid, .skills-grid{ grid-template-columns: 1fr; }
+    .hero-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "photo" "text";
+    }
+    .about-grid, .skills-grid, .formacao-grid{ grid-template-columns: 1fr; }
     .hobbies-grid{ grid-template-columns: 1fr; }
     .project-card{ width: 240px; }
     .project-modal-backdrop{ padding: 0; }
@@ -845,6 +917,8 @@ footer p{ color: var(--text-muted); font-size: 0.82rem; font-family: var(--font-
         padding: 24px 20px;
     }
     .nav-links{ display: none; }
+    .contato-links{ flex-direction: column; }
+    .contato-link{ min-width: 0; }
 
     .hero .wrap,
     .informacoes .wrap,

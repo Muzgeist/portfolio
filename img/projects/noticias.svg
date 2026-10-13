@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de jornal/notícias">
+  <defs>
+    <radialGradient id="bgNoticias" cx="25%" cy="15%" r="90%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgNoticias)"/>
+  <path d="M20 190 Q60 150 20 110" fill="none" stroke="#2a4530" stroke-width="2" opacity=".5"/>
+  <g transform="translate(130 50)">
+    <rect x="0" y="0" width="150" height="120" rx="6" fill="none" stroke="#c6fa6e" stroke-width="4"/>
+    <line x1="18" y1="26" x2="100" y2="26" stroke="#c6fa6e" stroke-width="5" stroke-linecap="round"/>
+    <line x1="18" y1="48" x2="132" y2="48" stroke="#8fa28f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="18" y1="64" x2="132" y2="64" stroke="#8fa28f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="18" y1="80" x2="100" y2="80" stroke="#8fa28f" stroke-width="3" stroke-linecap="round"/>
+    <line x1="18" y1="100" x2="80" y2="100" stroke="#2a4530" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

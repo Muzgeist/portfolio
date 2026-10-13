@@ -13,6 +13,22 @@ const languageMemoryCache = new Map(); // full_name -> { linguagem: bytes }
 const reposById = new Map();           // repo.id -> repo (liga card do carrossel ao modal)
 let lastFocusedTrigger = null;
 
+// repo.name (lowercase) -> arte temática própria; sem tela ao vivo pra fotografar,
+// então cada projeto recebe uma ilustração genérica alinhada ao seu tema.
+const PROJECT_IMAGES = {
+    "noticias": "img/projects/noticias.svg",
+    "noticias2": "img/projects/noticias2.svg",
+    "pratica-2-front-end": "img/projects/pratica-2-front-end.svg",
+    "universidade": "img/projects/universidade.svg",
+    "walpaper": "img/projects/walpaper.svg",
+    "yggdrasil": "img/projects/yggdrasil.svg",
+    "eventos": "img/projects/eventos.svg",
+    "concessionariatde": "img/projects/concessionariatde.svg",
+    "app_desktop": "img/projects/app_desktop.svg",
+    "portfolio": "img/projects/portfolio.svg"
+};
+const DEFAULT_PROJECT_IMAGE = "img/projects/default.svg";
+
 const LANGUAGE_COLORS = {
     JavaScript: "#f1e05a", TypeScript: "#3178c6", Python: "#3572A5",
     HTML: "#e34c26", CSS: "#563d7c", Java: "#b07219", "C#": "#178600",
@@ -225,9 +241,11 @@ function buildCardHTML(repo, isClone, index) {
     const atributosExtra = isClone
         ? `aria-hidden="true" tabindex="-1"`
         : `style="--enter-delay:${(index || 0) * 60}ms" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalhes de ${nome}"`;
+    const imagem = PROJECT_IMAGES[repo.name.toLowerCase()] || DEFAULT_PROJECT_IMAGE;
 
     return `
         <article class="${classeCard}" data-repo-id="${repo.id}" ${atributosExtra}>
+            <img class="project-thumb" src="${imagem}" alt="Ilustração temática do projeto ${nome}" loading="lazy" ${isClone ? `aria-hidden="true"` : ""}>
             <div class="project-card-head">
                 <h3>${nome}</h3>
                 <div class="project-card-head-langs">
@@ -240,6 +258,7 @@ function buildCardHTML(repo, isClone, index) {
                 <span class="project-lang-tag">${linguagem ? escapeHTML(linguagem) : "—"}</span>
                 <span>★ ${repo.stargazers_count}</span>
             </div>
+            <a class="project-link" href="${repo.html_url}" target="_blank" rel="noopener" ${isClone ? `tabindex="-1" aria-hidden="true"` : ""}>Ver repositório ↗</a>
         </article>`;
 }
 
@@ -551,6 +570,7 @@ function initCarouselInteractions() {
 
     if (track) {
         track.addEventListener("click", e => {
+            if (e.target.closest(".project-link")) return;
             const card = e.target.closest(".project-card");
             if (!card || card.getAttribute("aria-hidden") === "true") return;
             const repo = reposById.get(Number(card.dataset.repoId));

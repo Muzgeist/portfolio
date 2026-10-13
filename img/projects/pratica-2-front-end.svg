@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de página web em construção">
+  <defs>
+    <radialGradient id="bgPratica" cx="50%" cy="10%" r="95%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgPratica)"/>
+  <g transform="translate(90 45)">
+    <rect x="0" y="0" width="220" height="140" rx="8" fill="none" stroke="#8fa28f" stroke-width="3"/>
+    <line x1="0" y1="28" x2="220" y2="28" stroke="#8fa28f" stroke-width="3"/>
+    <circle cx="16" cy="14" r="4" fill="#2a4530"/>
+    <circle cx="30" cy="14" r="4" fill="#2a4530"/>
+    <circle cx="44" cy="14" r="4" fill="#2a4530"/>
+    <path d="M55 95 L35 75 L55 55" fill="none" stroke="#c6fa6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M165 55 L185 75 L165 95" fill="none" stroke="#c6fa6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="95" y1="50" x2="125" y2="100" stroke="#c6fa6e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

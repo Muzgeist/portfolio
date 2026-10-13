@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de projeto acadêmico universitário">
+  <defs>
+    <radialGradient id="bgUni" cx="30%" cy="80%" r="95%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgUni)"/>
+  <g transform="translate(200 95)" fill="none" stroke="#c6fa6e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-90 0 L0 -40 L90 0 L0 40 Z"/>
+    <path d="M-45 18 L-45 55 Q0 75 45 55 L45 18" stroke="#8fa28f" stroke-width="3"/>
+    <line x1="90" y1="0" x2="90" y2="45" stroke="#8fa28f" stroke-width="3"/>
+    <circle cx="90" cy="52" r="5" fill="#8fa28f" stroke="none"/>
+  </g>
+</svg>

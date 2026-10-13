@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Ilustração genérica de portfólio pessoal">
+  <defs>
+    <radialGradient id="bgPortfolio" cx="35%" cy="15%" r="95%">
+      <stop offset="0%" stop-color="#17231a"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#bgPortfolio)"/>
+  <path d="M40 15 Q60 65 35 115 Q15 155 45 195" fill="none" stroke="#2a4530" stroke-width="2" opacity=".55"/>
+  <g transform="translate(145 55)" fill="none" stroke="#c6fa6e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="0" y="20" width="110" height="80" rx="6"/>
+    <path d="M0 20 L20 0 L90 0 L110 20"/>
+    <circle cx="55" cy="60" r="18" stroke="#8fa28f"/>
+    <line x1="68" y1="73" x2="80" y2="85" stroke="#8fa28f"/>
+  </g>
+</svg>
