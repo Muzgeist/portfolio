@@ -330,18 +330,31 @@ header.hero{
     height: 280px;
     border-radius: 50%;
     padding: 4px;
+    cursor: pointer;
+    isolation: isolate;
+    -webkit-tap-highlight-color: transparent;
+}
+/* só a borda gira — a foto fica sempre em pé */
+.hero-photo-spin{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
     background: conic-gradient(from 180deg, var(--moss), var(--lime), var(--moss));
     animation: spin 9s linear infinite, flicker 5.3s linear infinite;
+    z-index: 0;
 }
 .hero-photo-ring:hover{
-    animation: spin 9s linear infinite, flicker 5.3s linear infinite, crackle .4s ease-out;
+    animation: crackle .4s ease-out;
 }
+.hero-photo-ring:focus-visible{ outline: 2px solid var(--lime); outline-offset: 8px; }
 @keyframes crackle{
     0%{ box-shadow: 0 0 0 0 var(--glow-lime); }
     30%{ box-shadow: 0 0 0 10px rgba(198,250,110,.25); filter: brightness(1.3); }
     100%{ box-shadow: 0 0 0 22px rgba(198,250,110,0); filter: brightness(1); }
 }
-@media (prefers-reduced-motion: reduce){ .hero-photo-ring, .hero-photo-ring:hover{ animation: none; } }
+@media (prefers-reduced-motion: reduce){
+    .hero-photo-ring, .hero-photo-ring:hover, .hero-photo-spin{ animation: none; }
+}
 @keyframes spin{ to{ transform: rotate(360deg); } }
 @keyframes flicker{
     0%, 100% { filter: brightness(1) saturate(1); }
@@ -353,6 +366,8 @@ header.hero{
     84% { filter: brightness(0.96) saturate(1); }
 }
 .hero-photo-ring img{
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -360,7 +375,66 @@ header.hero{
     display: block;
     border: 4px solid var(--bg);
     background: var(--bg);
+    user-select: none;
+    -webkit-user-drag: none;
 }
+/* canvas maior que o anel: folhas e runas voam para fora do círculo */
+.hero-photo-fx{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    display: none;
+    pointer-events: none;
+    transition: opacity .26s ease;
+}
+.hero-photo-fx.is-active{ display: block; }
+.hero-photo-fx.is-fading{ opacity: 0; }
+
+.hero-photo-hint{
+    position: absolute;
+    right: 2px; bottom: 6px;
+    z-index: 3;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-elev);
+    border: 1px solid var(--moss);
+    box-shadow: 0 4px 14px -4px rgba(0,0,0,.7);
+    transition: border-color .3s ease, box-shadow .3s ease, transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.hero-photo-hint svg{
+    width: 15px; height: 15px;
+    fill: none;
+    stroke: var(--lime);
+    stroke-width: 1.7;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 4px var(--glow-lime));
+}
+.hero-photo-ring:hover .hero-photo-hint,
+.hero-photo-ring:focus-visible .hero-photo-hint{
+    border-color: var(--lime);
+    box-shadow: 0 0 0 1px var(--glow-lime), 0 0 18px -2px var(--glow-lime);
+}
+.hero-photo-ring.is-swapping .hero-photo-hint{ transform: rotate(180deg); }
+.hero-photo-label{
+    position: absolute;
+    left: 50%; top: calc(100% + 18px);
+    transform: translate(-50%, -4px);
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    color: var(--text-muted);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+}
+.hero-photo-ring:hover .hero-photo-label,
+.hero-photo-ring:focus-visible .hero-photo-label{ opacity: 1; transform: translate(-50%, 0); }
+.hero-photo-ring.is-swapping .hero-photo-label{ opacity: 0; }
 .hero-photo-wrap::after{
     content: '';
     position: absolute;

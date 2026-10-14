@@ -62,8 +62,15 @@
                 </div>
             </div>
             <div class="hero-photo-wrap">
-                <div class="hero-photo-ring">
-                    <img src="img/Nazuna.png" alt="Foto de perfil de Felipe">
+                <div class="hero-photo-ring" id="hero-photo" role="button" tabindex="0"
+                     aria-label="Trocar foto de perfil: mostrar a ilustração anterior">
+                    <span class="hero-photo-spin" aria-hidden="true"></span>
+                    <img id="hero-photo-img" src="img/Felipe.jpg" alt="Foto de perfil de Felipe" draggable="false">
+                    <canvas class="hero-photo-fx" id="hero-photo-fx" aria-hidden="true"></canvas>
+                    <span class="hero-photo-hint" aria-hidden="true">
+                        <svg viewBox="0 0 20 20" focusable="false"><path d="M4 2.5V17.5L16 2.5V17.5Z"/></svg>
+                    </span>
+                    <span class="hero-photo-label" aria-hidden="true">clique para trocar de foto</span>
                 </div>
             </div>
         </div>
@@ -251,6 +258,7 @@
     </div>
 
     <script src="js/portfolio.js"></script>
+    <script src="js/hero-photo.js"></script>
     <script>document.getElementById("ano-atual").textContent = new Date().getFullYear();</script>
 </body>
 </html>
